@@ -567,3 +567,158 @@ header {
   text-decoration: none;
   cursor: default;
 }
+
+
+/* 14. Clients page */
+.client-placeholder-note {
+  font-size: 14px;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.client-logo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  min-height: 200px;
+  padding: 40px 20px;
+  background: var(--bg-light);
+  border: 2px dashed var(--border);
+  border-radius: 4px;
+  align-items: center;
+  justify-items: center;
+}
+
+.client-logo-grid-label {
+  color: var(--text-light);
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .client-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .client-logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.why-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .why-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.why-item {
+  border-top: 4px solid var(--accent-copper);
+  padding-top: 16px;
+}
+
+.why-item h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  color: var(--text-light);
+}
+
+
+/* 15. Final polish */
+
+/* Links */
+a {
+  color: var(--accent-copper);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #8b4513;
+  text-decoration: underline;
+}
+
+/* Header refinements */
+header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: var(--accent-copper);
+}
+
+/* Body padding for fixed header */
+@media (min-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* Anchor offset for fixed header */
+.section {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    scroll-margin-top: 70px;
+  }
+}
+
+/* Button refinements */
+.btn-copper:focus {
+  outline: 2px solid var(--accent-copper);
+  outline-offset: 2px;
+}
+
+.btn-copper:active {
+  background: #6b3410;
+}
+
+/* Footer link hover */
+.footer-block a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.footer-block a:hover {
+  border-bottom-color: var(--accent-copper);
+}
+
+/* Form improvements */
+input:required,
+textarea:required,
+select:required {
+  border-left: 3px solid var(--accent-copper);
+}
+
+button[type=submit] {
+  transition: all 0.3s;
+}
+
+button[type=submit]:hover {
+  background: #8b4513;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
