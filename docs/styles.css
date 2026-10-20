@@ -722,3 +722,11 @@ button[type=submit]:hover {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Project imagery */
+.featured-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
+.featured-card figure { margin: 0; }
+.featured-card img { width: 100%; height: auto; display: block; }
+.project-caption { font-size: 14px; margin-top: 12px; font-weight: 500; text-align: center; }
+.portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
+.portfolio-item img { width: 100%; height: auto; display: block; margin-bottom: 12px; }
