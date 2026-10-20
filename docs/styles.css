@@ -724,9 +724,89 @@ button[type=submit]:hover {
 }
 
 /* Project imagery */
-.featured-gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; }
-.featured-card figure { margin: 0; }
-.featured-card img { width: 100%; height: auto; display: block; }
-.project-caption { font-size: 14px; margin-top: 12px; font-weight: 500; text-align: center; }
+/* Featured Work editorial layout (index.html only) */
+.featured-gallery {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: auto auto auto;
+  gap: 24px;
+  margin: 40px 0;
+}
+
+.featured-card:nth-child(1) {
+  grid-column: 1 / 2;
+  grid-row: 1 / 3;
+}
+
+.featured-card:nth-child(2) {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+
+.featured-card:nth-child(3) {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+
+.featured-card:nth-child(4) {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+
+.featured-card figure {
+  margin: 0;
+  overflow: hidden;
+  aspect-ratio: auto;
+  height: 100%;
+}
+
+.featured-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.project-caption {
+  padding: 16px;
+  font-size: 14px;
+  font-weight: 500;
+  background: white;
+}
+
+@media (max-width: 768px) {
+  .featured-gallery {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
+  }
+
+  .featured-card:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+  }
+
+  .featured-card:nth-child(2) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+  }
+
+  .featured-card:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 3 / 4;
+  }
+
+  .featured-card:nth-child(4) {
+    grid-column: 1 / 2;
+    grid-row: 4 / 5;
+  }
+
+  .featured-card:nth-child(1) figure {
+    height: 400px;
+  }
+
+  .featured-card:nth-child(n+2) figure {
+    height: 250px;
+  }
+}
 .portfolio-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 30px; }
 .portfolio-item img { width: 100%; height: auto; display: block; margin-bottom: 12px; }
