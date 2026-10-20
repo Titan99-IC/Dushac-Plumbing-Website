@@ -478,17 +478,62 @@ header {
   background: var(--bg-light);
 }
 
-.service-list {
-  list-style: none;
+.service-cards {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
+  margin: 32px 0;
 }
 
-.service-list li {
-  padding: 16px;
-  background: var(--bg-light);
+.service-card {
+  padding: 28px 24px;
+  background: white;
+  border: 1px solid var(--border);
   border-radius: 4px;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.service-card:hover {
+  border-color: var(--accent-copper);
+  box-shadow: 0 2px 8px rgba(160, 82, 45, 0.1);
+}
+
+.service-icon {
+  width: 28px;
+  height: 28px;
+  margin-bottom: 16px;
+  flex-shrink: 0;
+  color: var(--accent-copper);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 8px;
+  color: var(--text-dark);
+}
+
+.service-card p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: var(--text-light);
+}
+
+@media (max-width: 768px) {
+  .service-cards {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 480px) {
+  .service-cards {
+    grid-template-columns: 1fr;
+  }
 }
 
 .cert-list {
