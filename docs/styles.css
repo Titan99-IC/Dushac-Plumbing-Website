@@ -2413,3 +2413,169 @@ main > .section:not(.section-hero):not(.section-credibility) > h2::before,
   .client-cta-actions { width: 100%; justify-content: stretch; }
   .client-cta-actions .btn { width: 100%; }
 }
+
+
+/* ========================================================================
+   Context SVG + photographic hero pass
+   ======================================================================== */
+
+/* Hero uses a verified Dushac project photo. The image is completely hidden
+   beneath the text area, then fades in toward the right side. */
+.section-hero {
+  isolation: isolate;
+  background: var(--navy-deep);
+  min-height: 570px;
+}
+
+.section-hero::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+  background-image: url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg');
+  background-size: cover;
+  background-position: 68% 47%;
+  background-repeat: no-repeat;
+  opacity: 1;
+  -webkit-mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 47%,
+    rgba(0,0,0,.12) 55%,
+    rgba(0,0,0,.38) 65%,
+    rgba(0,0,0,.64) 75%,
+    rgba(0,0,0,.80) 84%,
+    rgba(0,0,0,.86) 100%
+  );
+  mask-image: linear-gradient(
+    90deg,
+    transparent 0%,
+    transparent 47%,
+    rgba(0,0,0,.12) 55%,
+    rgba(0,0,0,.38) 65%,
+    rgba(0,0,0,.64) 75%,
+    rgba(0,0,0,.80) 84%,
+    rgba(0,0,0,.86) 100%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.section-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(
+      90deg,
+      rgba(19,24,47,1) 0%,
+      rgba(19,24,47,1) 48%,
+      rgba(19,24,47,.98) 56%,
+      rgba(19,24,47,.84) 68%,
+      rgba(19,24,47,.48) 82%,
+      rgba(19,24,47,.24) 100%
+    ),
+    linear-gradient(
+      to bottom,
+      rgba(19,24,47,.12),
+      rgba(19,24,47,.34)
+    );
+  opacity: 1;
+  -webkit-mask-image: none;
+  mask-image: none;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.section-hero > * {
+  position: relative;
+  z-index: 2;
+}
+
+.section-hero h1 {
+  max-width: 740px;
+}
+
+.section-hero .hero-subtitle {
+  backdrop-filter: blur(4px);
+}
+
+/* Keep technical SVGs crisp and visually coherent. */
+.service-icon,
+.qualification-mini-visual svg,
+.qualification-picture svg,
+.qualification-experience-visual svg {
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.service-icon {
+  overflow: visible;
+}
+
+@media (max-width: 900px) {
+  .section-hero::before {
+    background-position: 72% center;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 58%,
+      rgba(0,0,0,.28) 72%,
+      rgba(0,0,0,.74) 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 58%,
+      rgba(0,0,0,.28) 72%,
+      rgba(0,0,0,.74) 100%
+    );
+  }
+
+  .section-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(19,24,47,1) 0%,
+      rgba(19,24,47,1) 62%,
+      rgba(19,24,47,.90) 76%,
+      rgba(19,24,47,.48) 100%
+    );
+  }
+}
+
+@media (max-width: 640px) {
+  .section-hero {
+    min-height: 520px;
+  }
+
+  .section-hero::before {
+    background-position: 72% center;
+    opacity: .86;
+    -webkit-mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 64%,
+      rgba(0,0,0,.30) 80%,
+      rgba(0,0,0,.66) 100%
+    );
+    mask-image: linear-gradient(
+      90deg,
+      transparent 0%,
+      transparent 64%,
+      rgba(0,0,0,.30) 80%,
+      rgba(0,0,0,.66) 100%
+    );
+  }
+
+  .section-hero::after {
+    background: linear-gradient(
+      90deg,
+      rgba(19,24,47,1) 0%,
+      rgba(19,24,47,1) 70%,
+      rgba(19,24,47,.88) 86%,
+      rgba(19,24,47,.60) 100%
+    );
+  }
+}
