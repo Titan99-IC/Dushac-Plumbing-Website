@@ -80,4 +80,55 @@
       }
     });
   }
+
+  // 5. Working message composer for this static GitHub Pages site.
+  //    It opens the visitor's configured email app with the form contents
+  //    addressed to Dushac Plumbing; no form data is stored by the website.
+  var messageForms = document.querySelectorAll('.message-form');
+  Array.prototype.forEach.call(messageForms, function (messageForm) {
+    messageForm.addEventListener('submit', function (event) {
+      event.preventDefault();
+
+      var nameField = messageForm.querySelector('[name="name"]');
+      var emailField = messageForm.querySelector('[name="email"]');
+      var messageField = messageForm.querySelector('[name="message"]');
+      var recipient = messageForm.getAttribute('data-recipient') || 'dushacplumbing@yahoo.com';
+
+      var name = nameField ? nameField.value.trim() : '';
+      var email = emailField ? emailField.value.trim() : '';
+      var message = messageField ? messageField.value.trim() : '';
+
+      if (!name || !email || !message) {
+        window.alert('Please enter your name, email, and message.');
+        var missingField = !name ? nameField : (!email ? emailField : messageField);
+        if (missingField) missingField.focus();
+        return;
+      }
+
+      var subject = 'Website inquiry from ' + name;
+      var body = [
+        'Name: ' + name,
+        'Email: ' + email,
+        '',
+        'Message:',
+        message
+      ].join('\n');
+
+      var mailto = 'mailto:' + encodeURIComponent(recipient) +
+        '?subject=' + encodeURIComponent(subject) +
+        '&body=' + encodeURIComponent(body);
+
+      var oldStatus = messageForm.querySelector('.message-form-status');
+      if (oldStatus) oldStatus.remove();
+
+      var status = document.createElement('p');
+      status.className = 'message-form-status';
+      status.textContent = 'Opening your email app…';
+      status.setAttribute('role', 'status');
+      messageForm.appendChild(status);
+
+      window.location.href = mailto;
+    });
+  });
+
 })();
