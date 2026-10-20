@@ -567,3 +567,69 @@ header {
   text-decoration: none;
   cursor: default;
 }
+
+
+/* 14. Clients page */
+.client-placeholder-note {
+  font-size: 14px;
+  color: var(--text-light);
+  font-style: italic;
+  margin-bottom: 24px;
+}
+
+.client-logo-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  min-height: 200px;
+  padding: 40px 20px;
+  background: var(--bg-light);
+  border: 2px dashed var(--border);
+  border-radius: 4px;
+  align-items: center;
+  justify-items: center;
+}
+
+.client-logo-grid-label {
+  color: var(--text-light);
+  text-align: center;
+}
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .client-logo-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .client-logo-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.why-list {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+}
+
+@media (min-width: 768px) {
+  .why-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.why-item {
+  border-top: 4px solid var(--accent-copper);
+  padding-top: 16px;
+}
+
+.why-item h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.why-item p {
+  color: var(--text-light);
+}
