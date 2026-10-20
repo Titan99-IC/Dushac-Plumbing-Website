@@ -174,8 +174,9 @@
         <li>Email: <a href="mailto:dushacplumbing@yahoo.com">dushacplumbing@yahoo.com</a></li>
       </ul>
 
-      <form class="quote-form" action="https://formspree.io/f/mbjwdbrq" method="POST">
-        <h3>Request a Quote</h3>
+      <h3>Request a Quote</h3>
+      <p class="form-demo-note" style="color: #a0522d; font-weight: bold;">This form is a demonstration. To reach us, please call or email directly.</p>
+      <form class="quote-form" action="javascript:void(0);" method="GET" onsubmit="return false;" aria-labelledby="contact-cta-title">
         <div class="form-field">
           <label for="name">Name</label>
           <input type="text" id="name" name="name" autocomplete="name" required>
@@ -188,16 +189,21 @@
 
         <div class="form-field">
           <label for="phone">Phone</label>
-          <input type="tel" id="phone" name="phone" autocomplete="tel">
+          <input type="tel" id="phone" name="phone" autocomplete="tel" required>
         </div>
 
         <div class="form-field">
           <label for="service-needed">Service needed</label>
           <select id="service-needed" name="service_needed">
             <option value="">Select a service</option>
-            <option value="service-placeholder-1">Placeholder service 1</option>
-            <option value="service-placeholder-2">Placeholder service 2</option>
-            <option value="service-placeholder-3">Placeholder service 3</option>
+            <option value="plumbing-service-repair">Plumbing Service &amp; Repair</option>
+            <option value="water-heater-installation-repair">Water Heater Installation &amp; Repair</option>
+            <option value="gas-line-installation-repair">Gas Line Installation &amp; Repair</option>
+            <option value="water-fire-line-installation-repair">Water &amp; Fire Line Installation &amp; Repair</option>
+            <option value="new-construction-plumbing">New Construction Plumbing</option>
+            <option value="fixture-installation-repair">Fixture Installation &amp; Repair</option>
+            <option value="excavation-line-locating">Excavation &amp; Line Locating</option>
+            <option value="septic-repair-installation">Septic Repair &amp; Installation</option>
             <option value="other">Other</option>
           </select>
         </div>
@@ -207,7 +213,9 @@
           <textarea id="message" name="message" rows="5"></textarea>
         </div>
 
-        <button class="btn btn-copper" type="submit">Submit</button>
+        <p class="form-demo-note">Demo only: this form does not send or store any information. To submit a request, please call <a href="tel:+17246244215">724-624-4215</a> or email <a href="mailto:dushacplumbing@yahoo.com">dushacplumbing@yahoo.com</a>.</p>
+
+        <button class="btn btn-copper" type="submit" disabled title="To submit, please contact us directly">Submit</button>
       </form>
     </section>
   </main>
