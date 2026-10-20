@@ -513,3 +513,57 @@ header {
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 32px;
 }
+
+/* 13. Services hub page */
+.section-services-hub h1 {
+  font-size: 48px;
+  margin-bottom: 16px;
+}
+
+.section-services-hub > p {
+  max-width: 760px;
+  color: var(--text-light);
+  font-size: 18px;
+}
+
+.section-services-hub h2 {
+  margin-bottom: 32px;
+}
+
+.service-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .service-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.service-card {
+  background: var(--bg-light);
+  border: 1px solid var(--border);
+  border-left: 4px solid var(--accent-copper);
+  border-radius: 4px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.service-card h3 {
+  font-size: 20px;
+}
+
+.service-card p {
+  color: var(--text-light);
+  flex-grow: 1;
+}
+
+.service-card .text-link[aria-disabled="true"] {
+  color: var(--text-light);
+  text-decoration: none;
+  cursor: default;
+}
