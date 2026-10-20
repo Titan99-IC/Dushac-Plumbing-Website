@@ -2028,3 +2028,62 @@ main > .section:not(.section-hero):not(.section-credibility) > h2::before,
     transition: none;
   }
 }
+
+
+/* CTA semantics follow-up: explicit button treatments for all body actions. */
+.btn-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 10px 15px;
+  border: 1px solid rgba(17,23,45,.34);
+  border-radius: 3px;
+  background: rgba(255,255,255,.78);
+  color: var(--navy-ink);
+  font-size: .88rem;
+  font-weight: 800;
+  letter-spacing: .025em;
+  text-decoration: none;
+  box-shadow: inset 0 -2px 0 rgba(17,23,45,.05);
+}
+
+.btn-outline::after {
+  content: '→';
+  color: var(--accent-copper);
+  font-size: 1rem;
+  transition: transform .2s ease;
+}
+
+.btn-outline:hover {
+  border-color: var(--accent-copper);
+  background: #fff;
+  color: var(--navy-ink);
+  text-decoration: none;
+}
+
+.btn-outline:hover::after {
+  transform: translateX(3px);
+}
+
+.contact-action.btn {
+  min-width: 220px;
+  min-height: 48px;
+  border-radius: 3px;
+  box-shadow: 0 7px 16px rgba(17,23,45,.12);
+  text-align: center;
+}
+
+.contact-action.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(17,23,45,.16);
+  text-decoration: none;
+}
+
+@media (max-width: 520px) {
+  .btn-outline,
+  .contact-action.btn {
+    width: 100%;
+  }
+}
