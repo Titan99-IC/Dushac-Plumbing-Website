@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us | Dushac Plumbing</title>
+  <meta name="description" content="Contact Dushac Plumbing Inc. by phone, email, or the quote request form. Serving commercial, industrial, and residential customers in PA, OH, and WV.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#main-content">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="header-inner">
+      <a class="logo" href="index.html" aria-label="Dushac Plumbing home">Dushac Plumbing</a>
+
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-nav" aria-label="Toggle navigation menu">
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="menu-toggle-icon" aria-hidden="true"></span>
+        <span class="menu-toggle-label">Menu</span>
+      </button>
+
+      <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+        <ul>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="qualifications.html">Qualifications</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </nav>
+
+      <a class="btn btn-copper header-cta" href="index.html#contact-cta">Request a Quote</a>
+    </div>
+  </header>
+
+  <main id="main-content">
+    <section id="contact-intro" class="section section-services-hub" aria-labelledby="contact-title">
+      <h1 id="contact-title">Contact Dushac Plumbing</h1>
+      <p>Call, email, or send us a request for a quote.</p>
+    </section>
+
+    <section id="contact-details" class="section section-contact" aria-labelledby="contact-details-title">
+      <div class="two-column">
+        <div>
+          <h2 id="contact-details-title">Contact Information</h2>
+          <ul class="contact-methods">
+            <li>Phone: <a class="contact-phone" href="tel:+17246244215">724-624-4215</a></li>
+            <li>Email: <a href="mailto:dushacplumbing@yahoo.com">dushacplumbing@yahoo.com</a></li>
+          </ul>
+          <address>
+            117 Dushac Lane<br>
+            Aliquippa PA
+          </address>
+          <h3>Hours</h3>
+          <p>M&ndash;F 6 AM&ndash;5 PM</p>
+        </div>
+
+        <div>
+          <h2 id="quote-form-title">Request a Quote</h2>
+          <form class="quote-form" action="https://formspree.io/f/your-form-id" method="POST" aria-labelledby="quote-form-title">
+            <div class="form-field">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" autocomplete="name" required>
+            </div>
+
+            <div class="form-field">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+            </div>
+
+            <div class="form-field">
+              <label for="phone">Phone</label>
+              <input type="tel" id="phone" name="phone" autocomplete="tel" required>
+            </div>
+
+            <div class="form-field">
+              <label for="service-needed">Service needed</label>
+              <select id="service-needed" name="service_needed">
+                <option value="">Select a service</option>
+                <option value="service-placeholder-1">Placeholder service 1</option>
+                <option value="service-placeholder-2">Placeholder service 2</option>
+                <option value="service-placeholder-3">Placeholder service 3</option>
+                <option value="other">Other</option>
+              </select>
+            </div>
+
+            <div class="form-field">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="5"></textarea>
+            </div>
+
+            <button class="btn btn-copper" type="submit">Submit</button>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="footer" class="site-footer">
+    <div class="footer-grid">
+      <section class="footer-block" aria-labelledby="footer-links-title">
+        <h2 id="footer-links-title">Pages</h2>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="services.html">Services</a></li>
+          <li><a href="projects.html">Projects</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="qualifications.html">Qualifications</a></li>
+          <li><a href="clients.html">Clients</a></li>
+          <li><a href="contact.html" aria-current="page">Contact</a></li>
+        </ul>
+      </section>
+
+      <section class="footer-block" aria-labelledby="footer-certs-title">
+        <h2 id="footer-certs-title">Certifications</h2>
+        <p>Rinnai ACE | ASSE Backflow | UTI Gas | DOT Gas</p>
+      </section>
+
+      <section class="footer-block" aria-labelledby="footer-hours-title">
+        <h2 id="footer-hours-title">Hours</h2>
+        <p>M&ndash;F 6 AM&ndash;5 PM</p>
+      </section>
+
+      <section class="footer-block" aria-labelledby="footer-contact-title">
+        <h2 id="footer-contact-title">Contact</h2>
+        <address>
+          117 Dushac Lane<br>
+          Aliquippa PA
+        </address>
+        <p>Phone: <a href="tel:+17246244215">724-624-4215</a></p>
+        <p>Email: <a href="mailto:dushacplumbing@yahoo.com">dushacplumbing@yahoo.com</a></p>
+      </section>
+    </div>
+    <p class="footer-copy">&copy; <span id="copyright-year">Dushac Plumbing Inc.</span> Dushac Plumbing Inc. All rights reserved.</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
