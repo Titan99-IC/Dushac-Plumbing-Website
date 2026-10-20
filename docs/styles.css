@@ -2434,7 +2434,7 @@ main > .section:not(.section-hero):not(.section-credibility) > h2::before,
   width: 100%;
   height: 100%;
   border: 0;
-  background-image: url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg');
+  background-image: url('images/projects/hampton-wexford-water-heater.jpg');
   background-size: cover;
   background-position: 68% 47%;
   background-repeat: no-repeat;
@@ -2593,7 +2593,7 @@ main > .section:not(.section-hero):not(.section-credibility) > h2::before,
       rgba(19,24,47,.48) 80%,
       rgba(19,24,47,.20) 100%
     ),
-    url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg') 68% 47% / cover no-repeat;
+    url('images/projects/hampton-wexford-water-heater.jpg') 68% 47% / cover no-repeat;
 }
 
 .section-hero::before {
@@ -2632,7 +2632,7 @@ main > .section:not(.section-hero):not(.section-credibility) > h2::before,
         rgba(19,24,47,.58) 88%,
         rgba(19,24,47,.30) 100%
       ),
-      url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg') 72% center / cover no-repeat;
+      url('images/projects/hampton-wexford-water-heater.jpg') 72% center / cover no-repeat;
   }
 }
 
@@ -2647,6 +2647,413 @@ main > .section:not(.section-hero):not(.section-credibility) > h2::before,
         rgba(19,24,47,.65) 92%,
         rgba(19,24,47,.42) 100%
       ),
-      url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg') 76% center / cover no-repeat;
+      url('images/projects/hampton-wexford-water-heater.jpg') 76% center / cover no-repeat;
+  }
+}
+
+
+/* ========================================================================
+   Visual/content refinement pass 4 — Hampton hero, About imagery,
+   project showcase, centered qualifications, working message composer
+   ======================================================================== */
+
+/* Hampton Inn hero photography */
+.section-hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(19,24,47,1) 0%,
+      rgba(19,24,47,1) 52%,
+      rgba(19,24,47,.96) 60%,
+      rgba(19,24,47,.78) 70%,
+      rgba(19,24,47,.48) 80%,
+      rgba(19,24,47,.20) 100%
+    ),
+    url('images/projects/hampton-wexford-water-heater.jpg') 71% 48% / cover no-repeat;
+}
+
+/* About page gets real project photography instead of text-only bands. */
+.about-story-section {
+  display: grid;
+  grid-template-columns: minmax(0, .9fr) minmax(420px, 1.1fr);
+  gap: clamp(38px, 6vw, 76px);
+  align-items: center;
+}
+
+.about-story-copy p:not(.section-kicker) {
+  max-width: 640px;
+  color: var(--ink-muted);
+  line-height: 1.78;
+}
+
+.about-story-photo,
+.about-quality-photo {
+  margin: 0;
+  position: relative;
+}
+
+.about-story-photo::before,
+.about-quality-photo::before {
+  content: '';
+  position: absolute;
+  width: 34%;
+  height: 30%;
+  right: -12px;
+  bottom: 24px;
+  border-right: 6px solid var(--accent-copper);
+  border-bottom: 6px solid var(--accent-copper);
+  pointer-events: none;
+}
+
+.about-story-photo img {
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-story-photo figcaption,
+.about-quality-photo figcaption {
+  margin-top: 12px;
+  color: var(--ink-muted);
+  font-size: .78rem;
+  font-weight: 600;
+  letter-spacing: .02em;
+}
+
+.about-quality-layout {
+  display: grid;
+  grid-template-columns: minmax(360px, .9fr) minmax(0, 1.1fr);
+  gap: clamp(38px, 6vw, 72px);
+  align-items: center;
+}
+
+.about-quality-photo img {
+  width: 100%;
+  height: 420px;
+  object-fit: cover;
+  display: block;
+}
+
+.about-quality-content {
+  min-width: 0;
+}
+
+.about-quality-content > div {
+  display: grid;
+  gap: 26px;
+}
+
+/* Projects Behind the Names: broader editorial collage with less cramped tiles. */
+.client-project-grid {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-rows: 300px 300px 270px;
+  gap: 18px;
+}
+
+.client-project-marriott {
+  grid-column: 1 / 8;
+  grid-row: 1 / 3;
+}
+
+.client-project-fairfield {
+  grid-column: 8 / 13;
+  grid-row: 1;
+}
+
+.client-project-taco {
+  grid-column: 8 / 11;
+  grid-row: 2;
+}
+
+.client-project-titus {
+  grid-column: 11 / 13;
+  grid-row: 2;
+}
+
+.client-project-springhill {
+  grid-column: 1 / 13;
+  grid-row: 3;
+}
+
+.client-project-copy {
+  padding: 68px 24px 22px;
+}
+
+.client-project-marriott .client-project-copy h3,
+.client-project-springhill .client-project-copy h3 {
+  font-size: clamp(1.8rem, 3vw, 2.45rem);
+}
+
+.client-project-marriott img {
+  object-position: center 44%;
+}
+
+.client-project-springhill img {
+  object-position: center 44%;
+}
+
+/* Center and regularize qualification/certification presentation. */
+#qualifications-preview .section-heading-row {
+  display: grid;
+  grid-template-columns: 1fr;
+  justify-items: center;
+  text-align: center;
+}
+
+#qualifications-preview .section-heading-row > div {
+  display: grid;
+  justify-items: center;
+}
+
+#qualifications-preview .section-heading-link {
+  margin-top: 22px;
+}
+
+#qualifications-preview .qualification-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 0;
+  gap: 16px;
+}
+
+#qualifications-preview .qualification-card,
+#qualifications-preview .qualification-card-wide {
+  grid-column: auto;
+  min-height: 230px;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+  border: 1px solid var(--line-soft);
+  background: #fff;
+}
+
+#qualifications-preview .qualification-card-wide {
+  color: var(--navy-ink);
+}
+
+#qualifications-preview .qualification-card-wide .qualification-mini-visual {
+  color: var(--accent-copper);
+}
+
+#qualifications-preview .qualification-mini-visual {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.qualification-gallery-section .section-heading-stack {
+  max-width: 760px;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+  display: grid;
+  justify-items: center;
+}
+
+.qualification-gallery-section .qualification-picture-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.qualification-gallery-section .qualification-picture-card,
+.qualification-gallery-section .qualification-picture-feature {
+  grid-column: auto;
+  grid-template-columns: 1fr;
+  min-height: 420px;
+  text-align: center;
+}
+
+.qualification-gallery-section .qualification-picture {
+  min-height: 190px;
+  border-right: 0;
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.qualification-gallery-section .qualification-picture-copy {
+  align-items: center;
+  justify-content: flex-start;
+  padding: 28px 24px 32px;
+}
+
+.qualification-gallery-section .qualification-picture-copy p {
+  max-width: 300px;
+}
+
+.qualification-experience {
+  max-width: 920px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Working client-side message composer. */
+.message-panel {
+  padding: clamp(26px, 4vw, 38px);
+}
+
+.message-panel h3 {
+  margin: 4px 0 22px;
+  font-size: clamp(1.65rem, 3vw, 2.15rem);
+}
+
+.message-form {
+  display: grid;
+  gap: 16px;
+}
+
+.message-form-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.message-form label {
+  display: grid;
+  gap: 7px;
+  color: var(--navy-ink);
+  font-size: .76rem;
+  font-weight: 800;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.message-form input,
+.message-form textarea {
+  width: 100%;
+  border: 1px solid #c9c7c2;
+  border-radius: 3px;
+  background: #fff;
+  color: var(--navy-ink);
+  font: inherit;
+  font-size: .96rem;
+  letter-spacing: 0;
+  text-transform: none;
+  padding: 12px 13px;
+}
+
+.message-form textarea {
+  min-height: 132px;
+  resize: vertical;
+  line-height: 1.55;
+}
+
+.message-form input:focus,
+.message-form textarea:focus {
+  outline: 3px solid rgba(183,104,66,.18);
+  border-color: var(--accent-copper);
+}
+
+.message-form .btn {
+  justify-self: start;
+}
+
+.message-form-note {
+  margin: 0;
+  color: var(--ink-muted);
+  font-size: .76rem;
+  line-height: 1.5;
+}
+
+.message-form-status {
+  margin: 0;
+  color: var(--accent-copper);
+  font-weight: 700;
+}
+
+@media (max-width: 980px) {
+  .about-story-section,
+  .about-quality-layout {
+    grid-template-columns: 1fr;
+  }
+
+  .about-story-photo img,
+  .about-quality-photo img {
+    height: 400px;
+  }
+
+  .qualification-gallery-section .qualification-picture-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .client-project-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-rows: 390px 270px 270px;
+  }
+
+  .client-project-marriott {
+    grid-column: 1 / 3;
+    grid-row: 1;
+  }
+
+  .client-project-fairfield {
+    grid-column: 1;
+    grid-row: 2;
+  }
+
+  .client-project-taco {
+    grid-column: 2;
+    grid-row: 2;
+  }
+
+  .client-project-titus {
+    grid-column: 1;
+    grid-row: 3;
+  }
+
+  .client-project-springhill {
+    grid-column: 2;
+    grid-row: 3;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-hero {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(19,24,47,1) 0%,
+        rgba(19,24,47,1) 74%,
+        rgba(19,24,47,.90) 84%,
+        rgba(19,24,47,.62) 93%,
+        rgba(19,24,47,.42) 100%
+      ),
+      url('images/projects/hampton-wexford-water-heater.jpg') 76% center / cover no-repeat;
+  }
+
+  .about-story-photo img,
+  .about-quality-photo img {
+    height: 330px;
+  }
+
+  .client-project-grid {
+    grid-template-columns: 1fr;
+    grid-template-rows: none;
+  }
+
+  .client-project-marriott,
+  .client-project-fairfield,
+  .client-project-taco,
+  .client-project-titus,
+  .client-project-springhill {
+    grid-column: 1;
+    grid-row: auto;
+    height: 300px;
+  }
+
+  .client-project-marriott {
+    height: 390px;
+  }
+
+  #qualifications-preview .qualification-grid,
+  .qualification-gallery-section .qualification-picture-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .message-form-row {
+    grid-template-columns: 1fr;
+  }
+
+  .message-form .btn {
+    width: 100%;
   }
 }

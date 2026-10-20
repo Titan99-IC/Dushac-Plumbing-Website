@@ -57,9 +57,27 @@
         </div>
 
         <div>
-          <div class="contact-cta-block">
-            <h3>Request a Quote</h3>
-            <p class="form-note">Online quote requests can be enabled at launch.</p>
+          <div class="contact-cta-block message-panel">
+            <p class="section-kicker">Send a Message</p>
+            <h3>Tell Us About Your Project</h3>
+            <form class="message-form" id="contact-message-form" data-recipient="dushacplumbing@yahoo.com">
+              <div class="message-form-row">
+                <label>
+                  <span>Name</span>
+                  <input type="text" name="name" autocomplete="name" required>
+                </label>
+                <label>
+                  <span>Email</span>
+                  <input type="email" name="email" autocomplete="email" required>
+                </label>
+              </div>
+              <label>
+                <span>Message</span>
+                <textarea name="message" rows="7" required placeholder="What can Dushac Plumbing help with?"></textarea>
+              </label>
+              <button class="btn btn-copper" type="submit">Send Message</button>
+              <p class="message-form-note">Opens your email app with the message ready to send.</p>
+            </form>
           </div>
         </div>
       </div>
