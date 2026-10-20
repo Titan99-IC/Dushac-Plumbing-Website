@@ -158,17 +158,6 @@
     <p class="footer-copy">&copy; Dushac Plumbing. Placeholder footer text.</p>
   </footer>
 
-  <script>
-    (function () {
-      var toggle = document.querySelector('.menu-toggle');
-      var nav = document.getElementById('primary-nav');
-      if (!toggle || !nav) return;
-      toggle.addEventListener('click', function () {
-        var expanded = toggle.getAttribute('aria-expanded') === 'true';
-        toggle.setAttribute('aria-expanded', String(!expanded));
-        nav.classList.toggle('is-open', !expanded);
-      });
-    })();
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
