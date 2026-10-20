@@ -112,3 +112,73 @@ header {
   max-width: 1200px;
   margin: 0 auto;
 }
+
+/* 6. Buttons */
+.btn {
+  display: inline-block;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+  font-family: inherit;
+  font-weight: 500;
+}
+
+.btn-copper {
+  background: var(--accent-copper);
+  color: white;
+}
+
+.btn-copper:hover {
+  background: #8b4513;
+}
+
+/* 7. Forms */
+.quote-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-field label {
+  margin-bottom: 8px;
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.form-field input,
+.form-field select,
+.form-field textarea {
+  padding: 12px;
+  border: 1px solid var(--border);
+  font-size: 16px;
+  font-family: inherit;
+  border-radius: 4px;
+}
+
+.form-field textarea {
+  resize: vertical;
+  min-height: 120px;
+}
+
+.form-field input:focus,
+.form-field select:focus,
+.form-field textarea:focus {
+  outline: none;
+  border-color: var(--accent-copper);
+  box-shadow: 0 0 0 2px rgba(160, 82, 45, 0.1);
+}
+
+.quote-form button {
+  align-self: flex-start;
+}
