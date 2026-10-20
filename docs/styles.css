@@ -2579,3 +2579,74 @@ main > .section:not(.section-hero):not(.section-credibility) > h2::before,
     );
   }
 }
+
+
+/* Final hero reveal: direct layered background for unmistakable left-to-right photo visibility. */
+.section-hero {
+  background:
+    linear-gradient(
+      90deg,
+      rgba(19,24,47,1) 0%,
+      rgba(19,24,47,1) 52%,
+      rgba(19,24,47,.96) 60%,
+      rgba(19,24,47,.78) 70%,
+      rgba(19,24,47,.48) 80%,
+      rgba(19,24,47,.20) 100%
+    ),
+    url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg') 68% 47% / cover no-repeat;
+}
+
+.section-hero::before {
+  content: none !important;
+  display: none !important;
+}
+
+.section-hero::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(to bottom, rgba(17,23,45,.08), rgba(17,23,45,.28)),
+    linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+  background-size: auto, 42px 42px, 42px 42px;
+  opacity: .42;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.qualification-experience-visual svg {
+  width: 78%;
+  max-width: 300px;
+  stroke-width: 3;
+}
+
+@media (max-width: 900px) {
+  .section-hero {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(19,24,47,1) 0%,
+        rgba(19,24,47,1) 64%,
+        rgba(19,24,47,.90) 75%,
+        rgba(19,24,47,.58) 88%,
+        rgba(19,24,47,.30) 100%
+      ),
+      url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg') 72% center / cover no-repeat;
+  }
+}
+
+@media (max-width: 640px) {
+  .section-hero {
+    background:
+      linear-gradient(
+        90deg,
+        rgba(19,24,47,1) 0%,
+        rgba(19,24,47,1) 73%,
+        rgba(19,24,47,.90) 83%,
+        rgba(19,24,47,.65) 92%,
+        rgba(19,24,47,.42) 100%
+      ),
+      url('images/projects/marriott-pittsburgh-bathroom-rough-in.jpg') 76% center / cover no-repeat;
+  }
+}
