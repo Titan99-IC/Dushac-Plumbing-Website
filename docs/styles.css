@@ -603,6 +603,59 @@ header {
   gap: 32px;
 }
 
+/* Testimonials enhancement */
+.testimonial {
+  position: relative;
+  padding: 28px;
+  margin: 0 0 24px 0;
+  background: #f8f8f6;
+  border-left: 4px solid var(--accent-copper);
+  border-radius: 0;
+}
+
+.testimonial::before {
+  content: '"';
+  position: absolute;
+  top: 8px;
+  left: 16px;
+  font-size: 48px;
+  line-height: 0.8;
+  color: var(--accent-copper);
+  opacity: 0.15;
+  pointer-events: none;
+  user-select: none;
+}
+
+.testimonial p {
+  position: relative;
+  margin: 0 0 16px 0;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--text-dark);
+}
+
+.testimonial footer {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent-copper);
+}
+
+@media (max-width: 768px) {
+  .testimonial {
+    padding: 20px;
+  }
+
+  .testimonial::before {
+    font-size: 40px;
+    top: 4px;
+  }
+
+  .testimonial p {
+    font-size: 14px;
+  }
+}
+
 /* 13. Services hub page */
 .section-services-hub h1 {
   font-size: 48px;
