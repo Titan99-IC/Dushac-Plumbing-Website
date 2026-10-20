@@ -1,0 +1,114 @@
+/* Dushac Plumbing – base structure and layout */
+
+/* 1. Custom properties */
+:root {
+  --primary-navy: #1a1f3a;
+  --accent-copper: #a0522d;
+  --bg-light: #f8f8f6;
+  --text-dark: #1a1f3a;
+  --text-light: #7a7a78;
+  --border: #e0dcd8;
+}
+
+/* 2. Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--text-dark);
+  background: white;
+  margin-top: 70px; /* clears fixed header */
+}
+
+h1,
+h2,
+h3 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 48px;
+}
+
+h2 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+}
+
+/* 3. Header */
+header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.header-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--primary-navy);
+  text-decoration: none;
+}
+
+/* 4. Navigation */
+.primary-nav ul {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+}
+
+.primary-nav a {
+  color: var(--text-dark);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.primary-nav a:hover {
+  color: var(--accent-copper);
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 24px;
+}
+
+@media (max-width: 767px) {
+  .primary-nav {
+    display: none;
+  }
+
+  .menu-toggle {
+    display: block;
+  }
+}
+
+/* 5. Main body sections */
+.section {
+  padding: 80px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
