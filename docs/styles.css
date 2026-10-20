@@ -633,3 +633,92 @@ header {
 .why-item p {
   color: var(--text-light);
 }
+
+
+/* 15. Final polish */
+
+/* Links */
+a {
+  color: var(--accent-copper);
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #8b4513;
+  text-decoration: underline;
+}
+
+/* Header refinements */
+header {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  transition: color 0.3s;
+}
+
+.logo:hover {
+  color: var(--accent-copper);
+}
+
+/* Body padding for fixed header */
+@media (min-width: 768px) {
+  body {
+    padding-top: 70px;
+  }
+}
+
+@media (max-width: 767px) {
+  body {
+    padding-top: 60px;
+  }
+}
+
+/* Anchor offset for fixed header */
+.section {
+  scroll-margin-top: 90px;
+}
+
+@media (max-width: 767px) {
+  .section {
+    scroll-margin-top: 70px;
+  }
+}
+
+/* Button refinements */
+.btn-copper:focus {
+  outline: 2px solid var(--accent-copper);
+  outline-offset: 2px;
+}
+
+.btn-copper:active {
+  background: #6b3410;
+}
+
+/* Footer link hover */
+.footer-block a {
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s, color 0.3s;
+}
+
+.footer-block a:hover {
+  border-bottom-color: var(--accent-copper);
+}
+
+/* Form improvements */
+input:required,
+textarea:required,
+select:required {
+  border-left: 3px solid var(--accent-copper);
+}
+
+button[type=submit] {
+  transition: all 0.3s;
+}
+
+button[type=submit]:hover {
+  background: #8b4513;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
